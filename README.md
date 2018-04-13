@@ -1,3 +1,8 @@
-### Apostilão de ADS
+## From dev to dev
 
-Pessoal, seguinte. Essa apostila vai contar com a contribuição de todos. Então, se você conhecer algo e achar interessante compartilhar conosco, sinta-se a vontade.
+Este repositório tem como objetivo ser uma apostila de estudos para a comunidade. 
+
+
+### Contribuições
+
+Antes de contribuir veja a [Guia de Contribuição](https://github.com/tricknp/From-dev-to-dev/blob/master/contributing.md)
