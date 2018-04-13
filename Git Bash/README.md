@@ -220,3 +220,54 @@ Os demais pushes não precisam dessa informação
 ### CLONAR UM REPOSITÓRIO REMOTO JÁ EXISTENTE
 
 	git clone git@github.com:ViniciusVonAhn/texugo.git
+	
+### Tags
+
+##### Criando uma tag leve
+
+	git tag vs-1.1
+
+##### Criando uma tag anotada
+
+	git tag -a vs-1.1 -m "Minha versão 1.1"
+
+##### Criando uma tag assinada
+Para criar uma tag assinada é necessário uma chave privada (GNU Privacy Guard - GPG).
+
+	git tag -s vs-1.1 -m "Minha tag assinada 1.1"
+
+##### Criando tag a partir de um commit (hash)
+
+	git tag -a vs-1.2 9fceb02
+	
+##### Criando tags no repositório remoto
+
+	git push origin vs-1.2
+	
+##### Criando todas as tags locais no repositório remoto
+
+	git push origin --tags
+	
+### Branches
+
+O **master** é o branch principal do GIT.
+
+O **HEAD** é um ponteiro *especial* que indica qual é o branch atual. Por padrão, o **HEAD** aponta para o branch principal, o **master**.
+
+##### Criando um novo branch
+
+	git branch bug-123
+	
+##### Trocando para um branch existente
+
+	git checkout bug-123
+	
+Neste caso, o ponteiro principal **HEAD** esta apontando para o branch chamado bug-123.
+
+##### Criar um novo branch e trocar 
+
+	git checkout -b bug-456
+	
+##### Voltar para o branch principal (master)
+
+	git checkout master
