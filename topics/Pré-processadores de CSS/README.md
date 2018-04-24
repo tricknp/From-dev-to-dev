@@ -25,8 +25,64 @@ Basicamente é como se você programasse em uma linguagem de programação compi
 
 
 ### Quando ultilizar?
-Então, depende muito do tamanho do projeto!
+Então, depende muito do tamanho do projeto.
 
 Se você irá desenvolver apenas uma página simples e pequena, talvez não seja o caso. Porém, quando se trata de sistemas ou até mesmo portais grandes ou, se você quer facilitar a manutenção desse código no futuro, vale muito a pena utilizar um pré-processador.
 
 ### Qual usar?
+Empunhar o verdadeiro poder de um pré-processador de CSS é uma aventura. Existem inúmeras linguagens, sintaxes e recursos, todos prontos para uso agora.
+
+Então, vamos comparar os três pré-processadores mais ultilizados atualmente.
+#### Linguagem base
+* [Sass](https://sass-lang.com/): Ruby
+* [Less](http://lesscss.org/): JavaScript
+* [Stylus](http://stylus-lang.com/): JavaScript
+
+#### Sintaxe
+A parte mais importante de escrever código em um pré-processador de CSS é entender a sintaxe. Felizmente para nós, a sintaxe é (ou pode ser) idêntica ao CSS regular para todos os três pré-processadores. SASS e Stylus possuem estilos adicionais. No SASS, você pode omitir chaves e ponto e vírgula, enquanto na Stylus, você também pode omitir dois pontos. Estes são opcionais em SASS e Stylus.
+
+Sass e LESS usam a sintaxe CSS padrão. Isso torna extremamente fácil converter um arquivo CSS existente em qualquer pré-processador. O Sass usa a extensão de arquivo .scss e o LESS usa a extensão de arquivo .less. O arquivo básico Sass ou LESS pode ser configurado como o exemplo abaixo:
+     
+     /* style.scss ou style.less */
+    h2 {
+      color: #fff;
+    }
+    
+Como você deve ter notado, isso é apenas CSS regular, que compila perfeitamente tanto no Sass quanto no LESS.
+
+É importante lembrar que o Sass também possui uma sintaxe antiga, que omite ponto e vírgula e chaves. Embora isso ainda esteja por aí, é antigo e não vamos usar além desse exemplo. A sintaxe usa a extensão de arquivo .sass. È mais ou menos assim:
+    
+    /* style.sass */
+    h1
+      color: #000
+   
+    h2
+      color: #fff
+   
+   
+Já sintaxe para Stylus é muito mais detalhada. Usando a extensão de arquivo .styl, o Stylus aceita a sintaxe CSS padrão, mas também aceita outras variações nas quais colchetes, dois-pontos e ponto e vírgula são todos opcionais. Por exemplo: 
+
+    /* style.styl */
+    h2 {
+      color: #fff;
+    }
+
+    /* omitindo colchetes */
+    h2
+      color: #fff;
+
+    /* Omitindo dois pontos e ponto-e-virgula */
+    h2
+      color #fff
+      
+Usar variações diferentes na mesma folha de estilo também é válido, o codigo será compilado sem erros. Por exemplo:
+
+    h1 {
+      color #000
+    }
+    
+    h2
+      color: #fff
+
+#### Variaveis
+As variáveis são uma das funcionalidades que comunidade mais desejadava para o CSS. Maioria dos desenvolvedores queriam definir uma cor base e usá-la em todo o arquivo CSS, em vez de escrever a cor hexadecimal ou nomeada em uma propriedade a cada vez. O mesmo que "color", variáveis necessárias para "width", "font-size", "font-family", "border" etc.
