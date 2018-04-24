@@ -5,4 +5,4 @@ Este repositório tem como objetivo ser uma apostila de estudos para a comunidad
 
 ### Contribuições
 
-Antes de contribuir veja o [CONTRIBUTING.md](https://github.com/tricknp/From-dev-to-dev/blob/master/contributing.md)
+Antes de contribuir veja o [CONTRIBUTING.md](https://github.com/tricknp/From-dev-to-dev/blob/master/CONTRIBUTING.md)
