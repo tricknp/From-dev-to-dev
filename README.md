@@ -1,3 +1,3 @@
-### Apostilão de ADS
+### FROM DEV TO DEV ###
 
 Pessoal, seguinte. Essa apostila vai contar com a contribuição de todos. Então, se você conhecer algo e achar interessante compartilhar conosco, sinta-se a vontade.
