@@ -86,3 +86,164 @@ Usar variações diferentes na mesma folha de estilo também é válido, o codig
 
 #### Variaveis
 As variáveis são uma das funcionalidades que comunidade mais desejadava para o CSS. Maioria dos desenvolvedores queriam definir uma cor base e usá-la em todo o arquivo CSS, em vez de escrever a cor hexadecimal ou nomeada em uma propriedade a cada vez. O mesmo que "color", variáveis necessárias para "width", "font-size", "font-family", "border" etc.
+
+Variáveis em SASS começam com sinal de "$", em LESS começam com o sinal de "@" e em Stylus começam sem prefixo. Tanto em SASS quanto em LESS, os valores são atribuídos com dois pontos (:) e em Stylus com sinal de igual (=). O exemplo abaixo mostra a diferença entre eles na pratica.
+     
+* CSS
+
+      div {
+         font-size: 1.2em;
+      }
+
+* Sass
+
+      $font-size: 1.2em;
+
+      div {    
+         font-size: $font-size;
+      }     
+      
+* Less
+
+      @font-size: 1.2em;
+
+      div {
+         font-size: @font-size;
+      }
+      
+* Stylus
+
+       font-size = 1.2em
+
+       div
+           font-size font-size
+           
+
+#### Nesting
+
+O CSS não possui hierarquia visual ao trabalhar com seletores filhos. Você tem que escrever seletores e suas combinações em linhas separadas. O aninhamento fornece uma hierarquia visual como no HTML e aumenta a legibilidade. Em alguns casos, o aninhamento causa superdimensionamento dos seletores e algo como um "trem de seleção", portanto, use-o com sabedoria.
+
+* CSS
+
+      ul { 
+         margin: 0; 
+      }
+     
+      ul li { 
+         float: left;
+      }
+     
+      ul a { 
+         color: #f3f3f3;
+     
+      }
+      ul a:hover {
+         color: #2aa8dd;
+      }
+      
+* Sass
+
+      $default-color: #f3f3f3;
+      $default-hover: #2aa8dd;
+
+      ul {
+          margin: 0;
+          
+          li {
+              float: left;
+          }
+
+          a {
+              color: $default-color;
+ 
+              &:hover {
+                  color: $default-hover;
+              }
+          }
+      }
+      
+ * Less
+ 
+       @default-color: #f3f3f3;
+       @default-hover: #2aa8dd;
+
+       ul {
+           margin: 0;
+          
+           li {
+               float: left;
+           }
+ 
+           a {
+               color: $default-color;
+  
+               &:hover {
+                   color: $default-hover;
+               }
+           }
+       }
+       
+* Stylus
+
+      default-color = #f3f3f3
+      default-hover = #2aa8dd
+
+      ul
+          margin 0
+          li
+              float left
+          a
+              color default-color
+              &:hover
+                  color default-hover
+                  
+#### Mixins
+Mixins são conjuntos de definições que compilam de acordo com alguns parâmetros ou regras estáticas.
+
+* CSS
+
+      h1 {
+         border: 5px solid #f3f3f3;
+      }
+      
+      h1:hover {
+         border-color: #ddd;
+      }
+
+* Sass
+
+      @mixin default-border($width) {
+          border: $width solid #f3f3f3;   
+
+          &:hover {
+              border-color: #ddd;
+          }
+      }
+
+      h1 {
+          @include default-border(3px);
+      }
+      
+* Less  
+
+      .default-border(@width) {
+          border: @width solid #f3f3f3;   
+
+          &:hover {
+              border-color: #ddd;
+          }
+      }
+
+      h1 {
+          .default-border(3px);
+      }
+      
+* Stylus
+
+      default-border(w)
+          border: n solid #f3f3f3
+          &:hover
+              border-color: #ddd 
+
+      h1
+          default-border(3px)
