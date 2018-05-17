@@ -470,3 +470,22 @@ Em vez de usar um único arquivo grande, separar seus códigos em partes pequena
       @import "library"
       @import "mixins/mixin.styl"
       @import "reset.css
+      
+***
+#### Relatório de erros
+Se você já escreveu CSS por uma boa quantia de tempo, tenho certeza que você já chegou a um ponto onde você tinha um erro em algum lugar e simplesmente não conseguia o encontrar. Se você é como eu, provavelmente passou a tarde toda arrancando os cabelos fora e comentando diversas coisas para caçar o erro.
+
+Pré-processadores CSS relatam os erros. Simples assim. Se tem alguma coisa errada em seu códigom ele te fala onde e, se você estiver com sorte até mesmo o porquê. 
+
+***
+#### Comentários
+Quando um pré-processador CSS está compilando, qualquer comentário escrito com barras duplas “//” é excluído e qualquer comentários escrito com barra e asterisco “/* */” não é alterado. Dito isso, use comentários com barras duplas para comentários que você queira na versão não compilada e comentários com barra e asterisco para comentários que serão visíveis após a compilação.
+
+
+***
+#### Inspirações
+* [HTMLMAG](https://htmlmag.com/article/an-introduction-to-css-preprocessors-sass-less-stylus)
+* [MEDIUM](https://medium.com/tableless/sass-vs-stylus-28c7e2884f1a)
+* [TABLELESS](https://tableless.com.br/sass-vs-less-vs-stylus-batalha-dos-pre-processadores/)
+* [SCOTT LOGIC](http://blog.scottlogic.com/2013/03/08/less-vs-sass-vs-stylus.html)
+* [TUTS+](https://code.tutsplus.com/tutorials/sass-vs-less-vs-stylus-preprocessor-shootout--net-24320)
